@@ -226,15 +226,16 @@ class TrafficQuality(BaseMetric):
         for ts in timesteps: #np.arange(start_time_ms, end_time_ms + time_step_size, time_step_size):
             if ts >= start_time_ms and ts <= end_time_ms:
                 scene_ind = self._scenario.get_scene(ts)
+                scene_old = self._scenario.get_scene(old_ts)
                 try:
                     curr_ego = scene_ind.get_entity_state(ego_id)
+                    prev_ego = scene_old.get_entity_state(ego_id)
                 except KeyError:
                     curr_ego = -1
                 if curr_ego != -1:
                     ego_vel.append(curr_ego.vel)
                     if len(ego_vel) > 1:
-                        ego_acc.append(
-                            (curr_ego.vel - self._scenario.get_scene(old_ts).get_entity_state(ego_id).vel) * (1000.0 / time_step_size))  # noqa
+                        ego_acc.append((curr_ego.vel - prev_ego.vel) * (1000.0 / time_step_size))  # noqa
                     else:
                         ego_acc.append(0.0)
             old_ts = ts
