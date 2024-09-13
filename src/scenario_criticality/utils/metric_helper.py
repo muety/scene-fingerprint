@@ -3,7 +3,7 @@ from typing import Tuple
 import numpy as np
 from csv_object_list_dataset_loader.loader import Entity, EntityState
 from shapely.geometry import LineString
-from utils.geometry import form_points, compute_distance_matrix
+from .geometry import form_points, compute_distance_matrix
 
 # t1: Ego enters intersection
 # t2: Adversary enters intersection

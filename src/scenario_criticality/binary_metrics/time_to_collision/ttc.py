@@ -2,8 +2,8 @@ from csv_object_list_dataset_loader.loader import EntityState, Scenario
 import numpy as np
 
 from scenario_criticality.base_metric import BaseMetric
-from utils.geometry import transform_to_ego_frame
-from utils.metric_helper import get_intersection_angles
+from scenario_criticality.utils.geometry import transform_to_ego_frame
+from scenario_criticality.utils.metric_helper import get_intersection_angles
 
 
 class TTC(BaseMetric):

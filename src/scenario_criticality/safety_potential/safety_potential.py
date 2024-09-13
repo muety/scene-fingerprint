@@ -11,9 +11,9 @@ from shapely.geometry import Point, Polygon, mapping
 from shapely import affinity
 
 from csv_object_list_dataset_loader import EntityState
-import utils.lanelet_tools as lt
-from utils import visualization_helper
-from utils import map_vis_lanelet2
+import scenario_criticality.utils.lanelet_tools as lt
+from scenario_criticality.utils import visualization_helper
+from scenario_criticality.utils import map_vis_lanelet2
 from scenario_criticality.base_metric import BaseMetric
 
 import matplotlib.pyplot as plt

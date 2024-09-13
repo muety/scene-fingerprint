@@ -1,7 +1,7 @@
 from csv_object_list_dataset_loader.loader import Entity, Scenario
 import numpy as np
 
-from utils.geometry import get_intersection
+from scenario_criticality.utils.geometry import get_intersection
 from shapely.geometry import LineString
 
 from scenario_criticality.base_metric import BaseMetric

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib import cm as cm
 import matplotlib.colors as colors
 from csv_object_list_dataset_loader.loader import Scenario
-from utils.metric_helper import get_entry_and_exit_times
+from .utils.metric_helper import get_entry_and_exit_times
 
 
 class BaseMetric:

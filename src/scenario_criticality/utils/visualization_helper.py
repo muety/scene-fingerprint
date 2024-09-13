@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cmx
 import matplotlib.colors as colors
 from matplotlib import cm as cm
-from utils import map_vis_lanelet2
+from . import map_vis_lanelet2
 
 import itertools
 import os
